@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List in JS</title>
+  </head>
+  <body>
+    <h2>List in JS</h2>
+    <script>
+      //   const olDomElement = document.createElement("ol");
+      //   const liDomElement1 = document.createElement("li");
+      //   const liDomElement2 = document.createElement("li");
+      //   const liDomElement3 = document.createElement("li");
+      //   const liDomElement4 = document.createElement("li");
+
+      //   olDomElement.appendChild(liDomElement1);
+      //   olDomElement.appendChild(liDomElement2);
+      //   olDomElement.appendChild(liDomElement3);
+      //   olDomElement.appendChild(liDomElement4);
+
+      //   liDomElement1.innerText = "Apple";
+      //   liDomElement2.innerText = "Samsung";
+      //   liDomElement3.innerText = "Moto";
+      //   liDomElement4.innerText = "Vivo";
+
+      //   // Add Ordered List with ListItems in the DOM
+      //   document.querySelector("body").appendChild(olDomElement);
+
+      //   // by seeing this example, we can say that to create simple list using js -- it is very complex
+      function createList() {
+        const olDomElement = document.createElement("ol");
+        const liDomElement1 = document.createElement("li");
+        const liDomElement2 = document.createElement("li");
+        const liDomElement3 = document.createElement("li");
+        const liDomElement4 = document.createElement("li");
+
+        olDomElement.appendChild(liDomElement1);
+        olDomElement.appendChild(liDomElement2);
+        olDomElement.appendChild(liDomElement3);
+        olDomElement.appendChild(liDomElement4);
+
+        liDomElement1.innerText = "Apple";
+        liDomElement2.innerText = "Samsung";
+        liDomElement3.innerText = "Moto";
+        liDomElement4.innerText = "Vivo";
+
+        // Add Ordered List with ListItems in the DOM
+        document.querySelector("body").appendChild(olDomElement);
+
+        // by seeing this example, we can say that to create simple list using js -- it is very complex
+      }
+      createList();
+      createList();
+      createList();
+      createList();
+      createList();
+      createList();
+      // there is a difference between rewriting of the code and reusing of the code.
+    </script>
+  </body>
+</html>

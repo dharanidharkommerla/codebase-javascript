@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Button</title>
+  </head>
+  <body>
+    <h2>JavaScript Button</h2>
+    <script>
+      // code to create a Button
+      const buttonDomElement = document.createElement("button"); // pass the element name to method
+      // <button></button>
+      buttonDomElement.innerText = "JavaScript DOM Button";
+      // we create the button, but it is not visiable on the screen
+      // to make it visiable, we have to  add it to DOM
+
+      // Add the button to the DOM
+      document.querySelector("body").appendChild(buttonDomElement);
+    </script>
+  </body>
+</html>

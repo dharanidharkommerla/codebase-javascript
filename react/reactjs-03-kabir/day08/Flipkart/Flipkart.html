@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipkart below Nav</title>
+    <style>
+      p {
+      }
+    </style>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // create a component
+      function CreateUI(props) {
+        return (
+          <div>
+            <img src={props.url} alt="" widht="70" height="70" />
+            <p>{props.title}</p>
+          </div>
+        );
+      }
+      function App() {
+        const containerStyle = {
+          display: "flex",
+          justifyContent: "space-evenly",
+        };
+        return (
+          // we need to pass a object, which contains the properties of the container
+          <div style={containerStyle}>
+            <CreateUI
+              url="https://rukminim1.flixcart.com/flap/64/64/image/29327f40e9c4d26b.png?q=100"
+              title="Grocery"
+            />
+            <CreateUI
+              url="https://rukminim1.flixcart.com/flap/64/64/image/22fddf3c7da4c4f4.png?q=100"
+              title="Mobiles"
+            />
+            <CreateUI
+              url="https://rukminim2.flixcart.com/fk-p-flap/100/100/image/bc2719c0bee2c802.jpg?q=50"
+              title="Fashion"
+            />
+
+            <CreateUI
+              url="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/o/y/6/-original-imahcd9h9ethbxaz.jpeg?q=70"
+              title="Electronics"
+            />
+            <CreateUI
+              url="https://rukminim2.flixcart.com/image/612/612/xif0q/container/0/y/5/24-rose24-norvium-original-imah2zazhgbydjxe.jpeg?q=70"
+              title="Home & Funitrue"
+            />
+            <CreateUI
+              url="https://rukminim2.flixcart.com/image/312/312/xif0q/air-conditioner-new/n/d/d/-original-imah4kvhstcqfxx9.jpeg?q=70"
+              title="Applience"
+            />
+
+            <CreateUI
+              url="https://media.istockphoto.com/id/155439315/photo/passenger-airplane-flying-above-clouds-during-sunset.jpg?s=612x612&w=0&k=20&c=LJWadbs3B-jSGJBVy9s0f8gZMHi2NvWFXa3VJ2lFcL0="
+              title="Travel"
+            />
+
+            <CreateUI
+              url="https://rukminim2.flixcart.com/image/612/612/xif0q/body-wash/f/i/q/-original-imahy2rqqfpjxhqz.jpeg?q=70"
+              title="Beauty, Toys & More "
+            />
+            <CreateUI
+              url="https://rukminim2.flixcart.com/image/312/312/xif0q/motorcycle/o/p/p/i3s-with-self-start-self-kick-hf-deluxe-i3s-with-self-start-drum-original-imahauhkzmaqrt2y.jpeg?q=70"
+              title="Two Wheelers"
+            />
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // pass empty object or null
+      var container = React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          null,
+          React.createElement("div", null, [
+            React.createElement("h2", {}, "React Elements"),
+            React.createElement("p", {}, "React looks very very complex now"),
+          ])
+        )
+      );
+      // observe carefully there are immediate children, and multiple childern inside the immediate children
+      ReactDOM.render(container, document.querySelector("root"));
+      // this process is very very complex.
+    </script>
+  </body>
+</html>

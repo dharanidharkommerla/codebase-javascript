@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSX Template</title>
+    <style>
+      #container {
+        /* border: 4px solid red; */
+        box-shadow: 0 0 10px green;
+        margin-bottom: 30px;
+        padding: 30px;
+        width: 1200px;
+        height: auto;
+      }
+    </style>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 
+      1st script tag -- is for the react
+      2nd script tag -- is for the reactdom
+      3rd script tag -- is for the babel -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- <script type="text/babel">
+      // create a container
+      const techContainer = (
+        <div id="container">
+          <h2>React JS</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga
+            architecto libero earum ullam odit vel rem nesciunt corporis,
+            perspiciatis ex cum esse beatae! Corrupti, temporibus odit adipisci
+            explicabo minima molestiae nobis deleniti libero ipsum in nihil sed
+            ducimus unde optio culpa officiis velit officia mollitia quod
+            facilis, iste autem? Voluptatem, dolorum amet eos doloremque
+            possimus asperiores sit corrupti excepturi placeat in explicabo rem
+            quibusdam optio libero pariatur ipsum officia laborum quaerat
+            perferendis inventore quas est esse! Error nihil, corrupti nam
+            veritatis magnam nisi blanditiis ab quasi necessitatibus mollitia
+            minima? Laudantium totam officiis ipsum officia a cum error, rem
+            repellat eligendi.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dolor
+            consequuntur ut maiores commodi veritatis unde facilis, culpa
+            placeat dicta blanditiis esse harum optio hic! Beatae enim ducimus
+            cupiditate mollitia. Rerum aperiam aut quo debitis repellat est
+            voluptates non ad nobis voluptatem molestias eligendi consectetur,
+            tempore dolorum rem perspiciatis consequatur qui veniam. Dolores,
+            veniam, reprehenderit in eveniet nostrum nam omnis sint perspiciatis
+            minus sit commodi error dicta quia molestias modi quas inventore
+            accusantium exercitationem reiciendis alias porro aut excepturi at
+            adipisci. Aperiam labore consequuntur dolores laborum magni eveniet,
+            fugiat vero amet dicta, saepe sint est earum, atque deserunt? At,
+            facilis?
+          </p>
+          <button>More Details</button>
+        </div>
+      );
+      ReactDOM.render(techContainer, document.getElementById("root"));
+      
+        // if you want to dynamic data / repeate the component , better to create the component inside a javascript function 
+        // -- advantages of creating ui using javascript function
+        // 1. reuse of ui
+        // 2. you can pass dynamic data to ui
+      
+    </script> -->
+    <script type="text/babel">
+      // function createContainer(
+      //   title = "Techonolgy",
+      //   discription = "discription of technology"
+      // ) {
+      //   return (
+      //     <div id="container">
+      //       <h2>{title}</h2>
+      //       <p>{discription}</p>
+      //       <button>More Details</button>
+      //     </div>
+      //   );
+      // }
+      function CreateContainer(
+        title = "Techonolgy",
+        discription = "discription of technology"
+      ) {
+        return (
+          <div id="container">
+            <h2>ReactJS</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi
+              obcaecati nemo aliquam praesentium nam. Inventore qui iste modi
+              eaque rem eveniet nisi aliquam repudiandae architecto.
+            </p>
+            <button>More Details</button>
+          </div>
+        );
+      }
+
+      // to create multiple containers
+      // function multipleContainer() {
+      //   return (
+      //     <div>
+      //       {createContainer(
+      //         "reactjs",
+      //         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis aperiam eveniet officiis quasi ea exercitationem voluptatem quam inventore aliquid ratione incidunt in tenetur dignissimos dicta aspernatur nobis, perferendis consectetur ex delectus, hic voluptatibus nostrum? Commodi ea maxime maiores dolor repellat aliquam est tempora nihil. Corporis eligendi doloremque ducimus quibusdam, hic eaque laborum tempora a neque repellat dolorum praesentium, facilis nisi excepturi nulla cum! Consectetur, suscipit minima in nisi enim alias facilis adipisci error illo reiciendis doloribus magnam, itaque soluta. Deleniti, cumque aut illum sapiente provident, impedit laboriosam doloribus culpa consectetur, omnis ratione aliquam assumenda voluptas delectus. Harum repudiandae dolorem repellat!"
+      //       )}
+      //       {createContainer(
+      //         "NextJS",
+      //         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis aperiam eveniet officiis quasi ea exercitationem voluptatem quam inventore aliquid ratione incidunt in tenetur dignissimos dicta aspernatur nobis, perferendis consectetur ex delectus, hic voluptatibus nostrum? Commodi ea maxime maiores dolor repellat aliquam est tempora nihil. Corporis eligendi doloremque ducimus quibusdam, hic eaque laborum tempora a neque repellat dolorum praesentium, facilis nisi excepturi nulla cum! Consectetur, suscipit minima in nisi enim alias facilis adipisci error illo reiciendis doloribus magnam, itaque soluta. Deleniti, cumque aut illum sapiente provident, impedit laboriosam doloribus culpa consectetur, omnis ratione aliquam assumenda voluptas delectus. Harum repudiandae dolorem repellat!"
+      //       )}
+      //       {createContainer(
+      //         "Angular",
+      //         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis aperiam eveniet officiis quasi ea exercitationem voluptatem quam inventore aliquid ratione incidunt in tenetur dignissimos dicta aspernatur nobis, perferendis consectetur ex delectus, hic voluptatibus nostrum? Commodi ea maxime maiores dolor repellat aliquam est tempora nihil. Corporis eligendi doloremque ducimus quibusdam, hic eaque laborum tempora a neque repellat dolorum praesentium, facilis nisi excepturi nulla cum! Consectetur, suscipit minima in nisi enim alias facilis adipisci error illo reiciendis doloribus magnam, itaque soluta. Deleniti, cumque aut illum sapiente provident, impedit laboriosam doloribus culpa consectetur, omnis ratione aliquam assumenda voluptas delectus. Harum repudiandae dolorem repellat!"
+      //       )}
+      //     </div>
+      //   );
+      // }
+      function MultipleContainer() {
+        return (
+          <div>
+            <CreateContainer />
+            <CreateContainer />
+            <CreateContainer />
+          </div>
+        );
+      }
+      ReactDOM.render(<MultipleContainer />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

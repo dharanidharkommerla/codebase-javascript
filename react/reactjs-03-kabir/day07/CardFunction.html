@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Function</title>
+    <style>
+      .card {
+        /* border: 4px solid green; */
+        box-shadow: 0 0 10px green;
+        padding: 10px;
+        width: 270px;
+        height: 400px;
+        margin: 10px 20px;
+      }
+      #cardContainer {
+        display: flex;
+        justify-content: space-evenly;
+      }
+    </style>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function createCard(name = "John", imgUrl) {
+        //write JSX Code to create a card
+        // const imgUrl = "https://i.pinimg.com/736x/8f/ba/a6/8fbaa6294a35cfdbdac358479ca32730.jpg";
+
+        return (
+          <div class="card">
+            <img src={imgUrl} alt="insception" width="80%" height="260px" />
+            <h2>{name}</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi,
+              molestias.
+            </p>
+            <button>Profile Details</button>
+          </div>
+        );
+      }
+      function multipleCard() {
+        return (
+          <div id="cardContainer">
+            {createCard(
+              "Dharanidhar Kommerla",
+              "https://i.pinimg.com/736x/8f/ba/a6/8fbaa6294a35cfdbdac358479ca32730.jpg"
+            )}
+            {createCard(
+              "Tagore Babu",
+              "https://static.vecteezy.com/system/resources/thumbnails/053/630/749/small/a-beautiful-young-business-woman-in-a-suit-and-tie-photo.jpeg"
+            )}
+            {createCard(
+              "Vinay Lingasetty",
+              "https://www.shutterstock.com/image-photo/beautiful-businesswoman-standing-arms-folded-260nw-298522610.jpg"
+            )}
+            {createCard(
+              "Abhilash ala",
+              "https://t3.ftcdn.net/jpg/01/91/85/06/360_F_191850653_IkzN9vZTtOtJ8NTKLKOp8PlaY8iCk6Ls.jpg"
+            )}
+          </div>
+        );
+      }
+      //   ReactDOM.render(createCard(), document.getElementById("root"));
+      ReactDOM.render(multipleCard(), document.getElementById("root"));
+    </script>
+  </body>
+</html>

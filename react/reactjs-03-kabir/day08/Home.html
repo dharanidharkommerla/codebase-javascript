@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./Home.css" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // any function starts with Capital words and returns JSX Component -- Functional Component
+      function CreateCard(props) {
+        return (
+          <div class="card">
+            <img src={props.imgUrl} width="80%" />
+            <h2>{props.title}</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi,
+              molestias.
+            </p>
+            <button>Profile Details</button>
+          </div>
+        );
+      }
+
+      function Header() {
+        return (
+          // we have made this header container as flexContainer
+          // childrens of flexContainer are flex items
+          // by default flex items displays the items in row direction
+          <div class="header">
+            <div class="leftPanel flexContainer">
+              <h2>My First Page in React</h2>
+            </div>
+            <div class="rightPanel flextContainer">
+              <a href="">Home</a>
+              <a href="">Profile</a>
+              <a href="">Products</a>
+              <a href="">Contact Us</a>
+              <a href="">Login</a>
+            </div>
+          </div>
+        );
+      }
+
+      function Main() {
+        return (
+          <div class="main flexContainer">
+            <CreateCard
+              title="Dharanidhar Kommerla"
+              imgUrl="https://media.istockphoto.com/id/1357551696/photo/portrait-of-a-confident-young-businessman-standing-with-his-arms-crossed-against-a-white.jpg?s=612x612&w=0&k=20&c=0ExMuwnjOU5VjegtCgfhbsz6wgdtmUoiOyKNUadJFz4="
+            />
+            <CreateCard
+              title="Tagore babu Chowdisetty"
+              imgUrl="https://media.istockphoto.com/id/1357551696/photo/portrait-of-a-confident-young-businessman-standing-with-his-arms-crossed-against-a-white.jpg?s=612x612&w=0&k=20&c=0ExMuwnjOU5VjegtCgfhbsz6wgdtmUoiOyKNUadJFz4="
+            />
+            <CreateCard
+              title="Vinay Lingasetty"
+              imgUrl="https://media.istockphoto.com/id/1357551696/photo/portrait-of-a-confident-young-businessman-standing-with-his-arms-crossed-against-a-white.jpg?s=612x612&w=0&k=20&c=0ExMuwnjOU5VjegtCgfhbsz6wgdtmUoiOyKNUadJFz4="
+            />
+            <CreateCard
+              title="Abhilash Ala"
+              imgUrl="https://media.istockphoto.com/id/1357551696/photo/portrait-of-a-confident-young-businessman-standing-with-his-arms-crossed-against-a-white.jpg?s=612x612&w=0&k=20&c=0ExMuwnjOU5VjegtCgfhbsz6wgdtmUoiOyKNUadJFz4="
+            />
+          </div>
+        );
+      }
+      function Footer() {
+        return (
+          <div class="footer">
+            <h2>Footer Component</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+              itaque perspiciatis rem illum optio corporis adipisci recusandae
+              modi aliquam id natus necessitatibus earum ipsum nulla, quos
+              facilis beatae repellendus voluptatibus, corrupti aspernatur sed
+              repellat incidunt excepturi qui. Quis qui earum cumque sapiente
+              debitis assumenda laudantium similique voluptates corporis,
+              ratione autem animi dicta iure atque. Quia eos similique
+              temporibus nihil explicabo, autem aperiam magnam, totam rerum nemo
+              dolorem consequatur quasi voluptatem! Perspiciatis itaque,
+              inventore quod soluta repudiandae recusandae cumque et! Amet
+              maiores aut, accusantium adipisci cumque delectus. Sapiente,
+              neque? Explicabo quos ducimus, possimus repudiandae id culpa
+              nostrum inventore est ea exercitationem expedita doloribus optio,
+              ullam veniam ab. Repellendus incidunt necessitatibus quis!
+              Doloribus quis perspiciatis eveniet molestiae culpa debitis, amet
+              deleniti. Itaque asperiores illum ex iste inventore repellendus
+              aliquid reiciendis exercitationem recusandae voluptate repellat
+              velit quis praesentium porro saepe, iusto neque ipsum amet. Eos id
+              eaque architecto iste voluptates obcaecati provident beatae.
+            </p>
+            <a href="">Explore more</a>
+          </div>
+        );
+      }
+      // it overrides one component on another component
+      //   ReactDOM.render(<Header />, document.getElementById("root"));
+      //   ReactDOM.render(<Main />, document.getElementById("root"));
+      //   ReactDOM.render(<Footer />, document.getElementById("root"));
+
+      function App() {
+        return (
+          <div>
+            <Header />
+            <Main />
+            <Footer />
+          </div>
+        );
+      }
+      //   if you place class = "flexContainer" to apply flex style in the App component --> the div's(Header, Main, Footer) comes to the center.
+      // but our goal to make <h2>content</h2> comes to the middle, so we add "flexContainer" to each div's
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

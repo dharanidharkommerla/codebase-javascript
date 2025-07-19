@@ -1,0 +1,63 @@
+/* by default, browser is adding some margin to body element */
+/* by default, for heading element some margin is applied by the browser */
+
+/* body,
+h2 {
+  margin: 0;
+} */
+
+* {
+  margin: 0;
+}
+
+/* to remove the default margin for each and every element use "*" -- universal selector */
+
+.header {
+  background-color: black;
+  color: white;
+  height: 90px;
+  /* to place the content in the middle veritcally and horizontally */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* to work above properties the container should be a flex container. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  height: 500px;
+  background-color: lightgray;
+  padding: 40px;
+}
+
+.footer {
+  height: 90px;
+  color: white;
+  background-color: darkred;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* assign the flexContainer class to all the components */
+}
+
+.card {
+  /* border: 4px solid green; */
+  box-shadow: 0 0 10px green;
+  padding: 10px;
+  width: 270px;
+  height: 400px;
+  margin: 10px 20px;
+}
+#cardContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card h3,
+p {
+  margin: 10px;
+}

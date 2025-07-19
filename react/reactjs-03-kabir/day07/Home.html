@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./Home.css" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // any function starts with Capital words and returns JSX Component -- Functional Component
+      function CreateCard(props) {
+        return (
+          <div class="card">
+            <img src={props.imgUrl} width="80%" />
+            <h2>{props.title}</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi,
+              molestias.
+            </p>
+            <button>Profile Details</button>
+          </div>
+        );
+      }
+
+      function Header() {
+        return (
+          <div class="header flexContainer">
+            <h2>Header Component</h2>
+          </div>
+        );
+      }
+      function Main() {
+        return (
+          <div class="main flexContainer">
+            <CreateCard
+              title="Dharanidhar Kommerla"
+              imgUrl="https://media.istockphoto.com/id/1357551696/photo/portrait-of-a-confident-young-businessman-standing-with-his-arms-crossed-against-a-white.jpg?s=612x612&w=0&k=20&c=0ExMuwnjOU5VjegtCgfhbsz6wgdtmUoiOyKNUadJFz4="
+            />
+            <CreateCard
+              title="Tagore babu Chowdisetty"
+              imgUrl="https://media.istockphoto.com/id/1357551696/photo/portrait-of-a-confident-young-businessman-standing-with-his-arms-crossed-against-a-white.jpg?s=612x612&w=0&k=20&c=0ExMuwnjOU5VjegtCgfhbsz6wgdtmUoiOyKNUadJFz4="
+            />
+            <CreateCard
+              title="Vinay Lingasetty"
+              imgUrl="https://media.istockphoto.com/id/1357551696/photo/portrait-of-a-confident-young-businessman-standing-with-his-arms-crossed-against-a-white.jpg?s=612x612&w=0&k=20&c=0ExMuwnjOU5VjegtCgfhbsz6wgdtmUoiOyKNUadJFz4="
+            />
+            <CreateCard
+              title="Abhilash Ala"
+              imgUrl="https://media.istockphoto.com/id/1357551696/photo/portrait-of-a-confident-young-businessman-standing-with-his-arms-crossed-against-a-white.jpg?s=612x612&w=0&k=20&c=0ExMuwnjOU5VjegtCgfhbsz6wgdtmUoiOyKNUadJFz4="
+            />
+          </div>
+        );
+      }
+      function Footer() {
+        return (
+          <div class="footer flexContainer">
+            <h2>Footer Component</h2>
+          </div>
+        );
+      }
+      // it overrides one component on another component
+      //   ReactDOM.render(<Header />, document.getElementById("root"));
+      //   ReactDOM.render(<Main />, document.getElementById("root"));
+      //   ReactDOM.render(<Footer />, document.getElementById("root"));
+
+      function App() {
+        return (
+          <div>
+            <Header />
+            <Main />
+            <Footer />
+          </div>
+        );
+      }
+      //   if you place class = "flexContainer" to apply flex style in the App component --> the div's(Header, Main, Footer) comes to the center.
+      // but our goal to make <h2>content</h2> comes to the middle, so we add "flexContainer" to each div's
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

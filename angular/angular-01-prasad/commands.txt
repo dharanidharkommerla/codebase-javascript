@@ -1,0 +1,21 @@
+cmd > npm install -g @angular/cli
+
+cmd > ng v
+
+cmd > ng new appname 
+cmd > ng new appname --standalone=false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
